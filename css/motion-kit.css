@@ -1,0 +1,64 @@
+/* Marquee + wave strip extracted from outputs/motion-examples.html.
+   Parameters: --track-duration, --track-gap, --track-align,
+   --wave-color, --wave-height, --wave-duration, --wave-bottom-duration.
+   Use data-direction="right" for reverse travel; data-wave adds wave edges. */
+[data-component="marquee"] { overflow: hidden; }
+[data-component="marquee"] > .mk-track {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    will-change: transform;
+    animation: kitMarquee var(--track-duration, 40s) linear infinite;
+}
+[data-component="marquee"] > .mk-track > .mk-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: var(--track-align, center);
+    gap: var(--track-gap, 22px);
+    padding-right: var(--track-gap, 22px);
+}
+[data-component="marquee"] > .mk-track > .mk-group > * { flex-shrink: 0; }
+[data-component="marquee"][data-direction="right"] > .mk-track { animation-direction: reverse; }
+@keyframes kitMarquee { to { transform: translateX(-50%); } }
+
+[data-component="marquee"][data-wave] { position: relative; }
+[data-component="marquee"][data-wave]::before,
+[data-component="marquee"][data-wave]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--wave-height, 55px);
+    background: var(--wave-color, #49c0da);
+    z-index: 3;
+    pointer-events: none;
+    --wave-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='60'%3E%3Cpath fill='black' d='M0 0H400V30Q300 90 200 30T0 30Z'/%3E%3C/svg%3E");
+    -webkit-mask-image: var(--wave-mask);
+    mask-image: var(--wave-mask);
+    -webkit-mask-size: 400px 60px;
+    mask-size: 400px 60px;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    animation: kitWave var(--wave-duration, 100s) linear infinite;
+}
+[data-component="marquee"][data-wave]::before { top: -1px; }
+[data-component="marquee"][data-wave]::after {
+    bottom: -1px;
+    transform: rotate(180deg);
+    animation-duration: var(--wave-bottom-duration, 85s);
+    animation-direction: reverse;
+}
+@keyframes kitWave {
+    to { -webkit-mask-position: 400px 0; mask-position: 400px 0; }
+}
+.paused [data-component="marquee"] > .mk-track,
+.paused [data-component="marquee"][data-wave]::before,
+.paused [data-component="marquee"][data-wave]::after,
+[data-component="marquee"].mk-offscreen > .mk-track,
+[data-component="marquee"].mk-offscreen::before,
+[data-component="marquee"].mk-offscreen::after { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+    body:not(.motion-enabled) [data-component="marquee"] > .mk-track,
+    body:not(.motion-enabled) [data-component="marquee"][data-wave]::before,
+    body:not(.motion-enabled) [data-component="marquee"][data-wave]::after { animation-play-state: paused; }
+}
