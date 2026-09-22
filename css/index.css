@@ -9,9 +9,13 @@ body {
     margin: 0;
     padding: 0;
 }
-header{height:800px}
+
+header {
+    height: 800px
+}
+
 body {
-     background: #00B0EC; 
+    background: #00B0EC;
     color: white;
     /* background: #222; */
     line-height: 1.35;
@@ -195,6 +199,7 @@ img {
     top: -30%;
     right: 10%;
 }
+
 .svg-p0 {
     width: 13%;
     bottom: 8%;
@@ -341,7 +346,7 @@ img {
 
 #concert {
     background-image: url('../img/bg.png');
-    background-size: 100%;
+    background-size: 103%;
     background-position: top;
     background-repeat: no-repeat;
     padding-top: 75px;
