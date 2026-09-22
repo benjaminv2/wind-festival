@@ -1,0 +1,77 @@
+[data-event-carousel] {
+    display: block;
+    --carousel-gap: 20px;
+}
+.event-carousel-viewport {
+    overflow: hidden;
+    padding-block: 58px 90px;
+}
+.event-carousel-track {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: var(--carousel-gap);
+    width: max-content;
+    transition: transform 850ms cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+.event-carousel-track > .event-box {
+    box-sizing: border-box;
+    flex: 0 0 var(--card-width);
+    width: var(--card-width);
+    min-width: 0;
+    padding: 100px clamp(16px, 4vw, 70px) 110px;
+}
+.event-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.event-carousel-dots { display: flex; gap: 12px; }
+.event-carousel-arrow {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 220ms ease;
+}
+.event-carousel-arrow::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/arr.svg") center / contain no-repeat;
+}
+.event-carousel-arrow--prev::before { transform: rotate(180deg); }
+.event-carousel-arrow:hover { transform: scale(1.2); }
+.event-carousel-arrow:disabled { opacity: .4; cursor: default; transform: none; }
+.event-carousel-dot {
+    width: 36px;
+    height: 28px;
+    padding: 6px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+.event-carousel-dot::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/dot.svg") center / contain no-repeat;
+}
+.event-carousel-dot[aria-current="true"]::before {
+    background-image: url("../img/dot-active.svg");
+        transform: scale(2.6);
+
+}
+.event-carousel-controls button:focus-visible { outline: 3px solid #ec6517; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+    .event-carousel-track { transition-duration: 0s; }
+    .event-carousel-arrow { transition: none; }
+}
