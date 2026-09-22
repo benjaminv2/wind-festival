@@ -121,6 +121,11 @@ img {
     top: 31%;
     left: 12%;
 }
+.svg-a2 {
+    width: 24%;
+    bottom: -2%;
+    right: -5%;
+}
 
 .svg-d {
     width: 15%;
@@ -139,6 +144,11 @@ img {
     top: 44%;
     left: 44%;
 }
+.svg-k2 {
+    width: 12%;
+    bottom: -2%;
+    right: 22%;
+}
 
 .svg-l {
     width: 16%;
@@ -150,6 +160,12 @@ img {
     width: 27%;
     top: 39%;
     right: 13%;
+}
+
+.svg-o2 {
+    width: 32%;
+    top: -30%;
+    right: 10%;
 }
 
 .svg-p {
@@ -164,10 +180,43 @@ img {
     right: 32%;
 }
 
+.svg-p3 {
+    width: 14%;
+    top: -10%;
+    right: 9%;
+}
+
 .svg-s {
     width: 13%;
     bottom: 10%;
     right: 36%;
+}
+
+.svg-s2 {
+    width: 13%;
+    top: 25%;
+    right: 26%;
+    z-index: 10;
+}
+
+.svg-e {
+    width: 11%;
+    bottom: 20%;
+    left: 27%;
+    z-index: 10;
+}
+
+.svg-g {
+    width: 14%;
+    bottom: 8%;
+    right: 5%;
+}
+
+.svg-i {
+    width: 26%;
+    top: -7%;
+    right: 4%;
+    z-index: 9999;
 }
 
 /* event */
@@ -214,17 +263,17 @@ img {
     /* 如果螢幕寬度不夠，允許自動換行（手機板必備） */
     list-style: none;
     /* 移除清單預設的圓點 */
-    padding: 0 30px 0 15px;
+    padding: 0 35px;
     /* 移除預設的內縮邊距 */
-    gap: 35px;
+    /* gap: 35px; */
     /* 設定項目之間的間距（可依需求調整） */
 }
 
 .navbar li {
     white-space: nowrap;
     color: #000;
-    padding: 40px 12px;
-    /* border-right: 1px solid #000; */
+    padding: 3px 12px;
+    border-right: 2px solid #000;
 }
 
 .navbar .bus {
