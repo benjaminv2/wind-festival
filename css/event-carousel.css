@@ -75,3 +75,26 @@
     .event-carousel-track { transition-duration: 0s; }
     .event-carousel-arrow { transition: none; }
 }
+
+.event-carousel-pause {
+    padding: 8px 16px;
+    border: 1px solid currentColor;
+    border-radius: 24px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.event-carousel-pause:disabled { opacity: .4; cursor: default; }
+.event-carousel-controls { flex-wrap: wrap; }
+
+/* Center card actions without changing their bottom position. */
+[data-event-carousel] .event-box .abs-btn {
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+[data-event-carousel] .event-box .abs-btn > .btn { pointer-events: auto; }

@@ -45,7 +45,20 @@
         controls.append(arrow('prev', '上一張活動'), dots, arrow('next', '下一張活動'));
         root.replaceChildren(viewport, controls);
         let index = Math.min(1, count - 1), physical = count + index;
-        let busy = false, timer, finishTimer, visible = true;
+        let busy = false, timer, finishTimer, visible = true, paused = false;
+        const pauseButton = document.createElement('button');
+        pauseButton.type = 'button';
+        pauseButton.className = 'event-carousel-pause';
+        pauseButton.textContent = '暫停';
+        pauseButton.setAttribute('aria-label', '暫停自動輪播');
+        pauseButton.disabled = count < 2;
+        pauseButton.addEventListener('click', () => {
+            paused = !paused;
+            pauseButton.textContent = paused ? '繼續播放' : '暫停';
+            pauseButton.setAttribute('aria-label', paused ? '繼續自動輪播' : '暫停自動輪播');
+            schedule();
+        });
+        controls.append(pauseButton);
         const buttons = cards.map((card, i) => {
             card.setAttribute('role', 'group');
             card.setAttribute('aria-label', `第 ${i + 1} 張，共 ${count} 張`);
@@ -66,7 +79,7 @@
         }
         function schedule() {
             clearTimeout(timer);
-            if (!reduced.matches && visible && !document.hidden && count > 1) {
+            if (!paused && !reduced.matches && visible && !document.hidden && count > 1) {
                 timer = setTimeout(() => go((index + 1) % count), 4000);
             }
         }

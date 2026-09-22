@@ -2,6 +2,53 @@
    Parameters: --track-duration, --track-gap, --track-align,
    --wave-color, --wave-height, --wave-duration, --wave-bottom-duration.
    Use data-direction="right" for reverse travel; data-wave adds wave edges. */
+/* Sign preset from the motion catalog. */
+[data-motion="sign"] {
+    animation: sign var(--motion-duration, 2.5s) var(--motion-ease, ease-in-out) var(--motion-delay, 0s) infinite;
+    transform-origin: var(--motion-origin, bottom right);
+}
+[data-motion="sign"][data-rhythm="smooth"] { --motion-ease: ease-in-out; }
+[data-motion="sign"][data-rhythm="stepped"] { --motion-ease: steps(var(--motion-steps, 2)); }
+@keyframes sign {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(-6deg); }
+}
+.paused [data-motion="sign"] { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+    body:not(.motion-enabled) [data-motion="sign"] { animation-play-state: paused; }
+}
+
+/* Additional map presets from the motion catalog. */
+[data-motion="bounce-double"],
+[data-motion="cloud-float"],
+[data-motion="swing-wavy"],
+[data-motion="tilt-right"],
+[data-motion="bounce-rebound"],
+[data-motion="swing-irregular"],
+[data-motion="float-soft"],
+[data-motion="parachute"] {
+    animation: var(--motion-name) var(--motion-duration, var(--preset-duration, 4s)) var(--motion-ease, ease-in-out) var(--motion-delay, 0s) infinite;
+    transform-origin: var(--motion-origin, bottom center);
+}
+[data-motion="bounce-double"]{--motion-name:bounceFast;--preset-duration:5s}
+[data-motion="cloud-float"]{--motion-name:cloudFloat;--preset-duration:5s}
+[data-motion="swing-wavy"]{--motion-name:swingWavy;--preset-duration:5s}
+[data-motion="tilt-right"]{--motion-name:wandPlus;--preset-duration:2s;--motion-origin:left bottom}
+[data-motion="bounce-rebound"]{--motion-name:kitBounce;--preset-duration:3s;--motion-y:-15px}
+[data-motion="parachute"]{--motion-name:floatParachute;--motion-origin:center}
+[data-motion][data-rhythm="stepped"] { --motion-ease: steps(var(--motion-steps, 2)); }
+[data-motion][data-rhythm="smooth"] { --motion-ease: ease-in-out; }
+@keyframes bounceFast{0%,40%,80%,100%{transform:translateY(0)}20%{transform:translateY(-15px)}60%{transform:translateY(-10px)}}
+@keyframes cloudFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes swingWavy{0%,100%{transform:rotate(-3deg)}25%{transform:rotate(4deg)}50%{transform:rotate(-2.5deg)}75%{transform:rotate(3deg)}}
+@keyframes wandPlus{0%,100%{transform:rotate(0)}50%{transform:rotate(5deg)}}
+@keyframes kitBounce{0%,50%,100%{transform:translateY(0)}30%{transform:translateY(var(--motion-y,-15px))}70%{transform:translateY(calc(var(--motion-y,-15px)/3))}}
+@keyframes floatParachute{0%,50%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-10px) rotate(-3deg)}75%{transform:translateY(-10px) rotate(3deg)}}
+.paused [data-motion] { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+    body:not(.motion-enabled) [data-motion] { animation-play-state: paused; }
+}
+
 [data-component="marquee"] { overflow: hidden; }
 [data-component="marquee"] > .mk-track {
     display: flex;
@@ -61,4 +108,56 @@
     body:not(.motion-enabled) [data-component="marquee"] > .mk-track,
     body:not(.motion-enabled) [data-component="marquee"][data-wave]::before,
     body:not(.motion-enabled) [data-component="marquee"][data-wave]::after { animation-play-state: paused; }
+}
+
+/* Horizontal travel with a pause at each end. */
+[data-motion="slide-pause"] {
+    animation: slidePause var(--motion-duration, 4s) var(--motion-ease, ease-in-out) var(--motion-delay, 0s) infinite;
+}
+@keyframes slidePause {
+    0%, 15%, 100% { transform: translateX(calc(-1 * var(--motion-x, 24px))); }
+    50%, 65% { transform: translateX(var(--motion-x, 24px)); }
+}
+
+[data-motion="swing-irregular"]{--motion-name:irregularSwing;--preset-duration:3s}
+
+[data-motion="float-soft"]{--motion-name:kitFloat;--motion-y:-12px;--motion-x:0px;--motion-rotate:2deg}
+@keyframes irregularSwing{0%,100%{transform:rotate(0)}20%{transform:rotate(-2deg)}40%{transform:rotate(4deg)}60%{transform:rotate(-3deg)}80%{transform:rotate(2deg)}}
+@keyframes kitFloat{0%,100%{transform:translate(0,0) rotate(calc(-1 * var(--motion-rotate,2deg)))}50%{transform:translate(var(--motion-x,0px),var(--motion-y,-12px)) rotate(var(--motion-rotate,2deg))}}
+
+/* Staged button animation; appearance stays in index.css. */
+
+[data-component="sparkle-reveal"].btn{position:relative;display:inline-flex;align-items:center;gap:12px;border:0;font-family:inherit;line-height:inherit;cursor:pointer;overflow:visible;text-align:inherit}
+
+
+
+[data-component="sparkle-reveal"]:is(:hover,:focus-visible)>.sr-label{animation:srLabelPlay .65s cubic-bezier(.22,1,.36,1) both}
+[data-component="sparkle-reveal"]:is(:hover,:focus-visible)>.sr-arrow{animation:srArrowPlay .75s cubic-bezier(.22,1,.36,1) .06s both}
+@keyframes srLabelPlay{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-7px) rotate(-2deg) scale(1.04)}50%{transform:translateY(2px) rotate(1deg) scale(.99)}75%{transform:translateY(-2px) rotate(-.5deg)}}
+@keyframes srArrowPlay{0%,100%{transform:translateX(0) rotate(0)}20%{transform:translateX(-5px) rotate(-12deg) scale(.9)}48%{transform:translateX(12px) rotate(8deg) scale(1.2)}72%{transform:translateX(-2px) rotate(-4deg)}88%{transform:translateX(3px) rotate(2deg)}}
+
+[data-component="sparkle-reveal"].sr-ready:not(.sr-visible),[data-component="sparkle-reveal"].sr-ready:not(.sr-visible)>span{opacity:0}
+[data-component="sparkle-reveal"].sr-visible{animation:srShape .65s cubic-bezier(.22,1,.36,1) both}
+.sr-visible:not(.sr-entered)>.sr-label{animation:srText .4s ease .4s both}
+.sr-visible:not(.sr-entered)>.sr-arrow{animation:srArrow .4s ease .7s both}
+.sr-confetti{position:absolute;left:-70px;top:-70px;width:calc(100% + 140px);height:calc(100% + 140px);pointer-events:none;z-index:2}
+@keyframes srShape{0%{opacity:0;transform:scale(.88,.76) skewX(-5deg)}55%{opacity:1;transform:scale(1.035,.97) skewX(2deg)}100%{opacity:1;transform:scale(1) skewX(0)}}
+@keyframes srText{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes srArrow{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
+@keyframes srStar{0%{opacity:1;transform:translate(-50%,-50%) rotate(0)}50%{opacity:1;transform:translate(calc(-50% + var(--sx)*.5),calc(-50% + var(--sy))) rotate(calc(var(--spin)*.5))}100%{opacity:0;transform:translate(calc(-50% + var(--sx)),calc(-50% + var(--sy) + 160px)) scale(.3) rotate(var(--spin))}}
+@media(prefers-reduced-motion:reduce){[data-component="sparkle-reveal"],[data-component="sparkle-reveal"]>span{animation:none!important;opacity:1!important}.sr-confetti{display:none}}
+
+.btn[data-component="sparkle-reveal"] span::after{content:none}
+
+/* Catalog entrance on the wrapper; the image floats after it appears. */
+[data-enter="pop"][data-trigger="load"] {
+    animation: kitEnter var(--enter-duration, .9s) cubic-bezier(.22, 1.3, .36, 1) var(--enter-delay, 0s) both;
+}
+@keyframes kitEnter {
+    from { opacity: 0; transform: translate(var(--enter-x, 0px), var(--enter-y, 60px)) scale(var(--enter-scale, .15)); }
+    to { opacity: 1; transform: translate(0, 0) scale(1); }
+}
+.paused [data-enter="pop"] { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+    body:not(.motion-enabled) [data-enter="pop"][data-trigger="load"] { animation: none; }
 }

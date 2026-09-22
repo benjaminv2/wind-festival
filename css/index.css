@@ -9,11 +9,11 @@ body {
     margin: 0;
     padding: 0;
 }
-
+header{height:800px}
 body {
-    /* background: #00B0EC; */
+     background: #00B0EC; 
     color: white;
-    background: #222;
+    /* background: #222; */
     line-height: 1.35;
 }
 
@@ -121,10 +121,17 @@ img {
     top: 31%;
     left: 12%;
 }
+
 .svg-a2 {
     width: 24%;
     bottom: -2%;
     right: -5%;
+}
+
+.svg-c {
+    width: 24%;
+    top: -2%;
+    right: 9%;
 }
 
 .svg-d {
@@ -134,16 +141,31 @@ img {
 }
 
 .svg-f {
-    width: 11%;
+    width: 9%;
     top: 51%;
-    left: 33%;
+    left: 37%;
+    /* display: none; */
+}
+
+.svg-f2 {
+    width: 10%;
+    bottom: -21%;
+    left: 23%;
+    /* display: none; */
+}
+
+.svg-j {
+    width: 35%;
+    bottom: -6%;
+    right: 4%;
 }
 
 .svg-k {
     width: 9%;
     top: 44%;
-    left: 44%;
+    left: 46%;
 }
+
 .svg-k2 {
     width: 12%;
     bottom: -2%;
@@ -154,6 +176,12 @@ img {
     width: 16%;
     bottom: 18%;
     left: 36%;
+}
+
+.svg-l2 {
+    width: 32%;
+    top: -8%;
+    right: 10%;
 }
 
 .svg-o {
@@ -167,11 +195,17 @@ img {
     top: -30%;
     right: 10%;
 }
+.svg-p0 {
+    width: 13%;
+    bottom: 8%;
+    right: 15%;
+}
+
 
 .svg-p {
-    width: 15%;
-    bottom: 6%;
-    right: 13%;
+    width: 31%;
+    top: -6%;
+    right: 5%;
 }
 
 .svg-p2 {
@@ -193,6 +227,13 @@ img {
 }
 
 .svg-s2 {
+    width: 38%;
+    bottom: -11%;
+    left: 5%;
+    z-index: 10;
+}
+
+.svg-s3 {
     width: 13%;
     top: 25%;
     right: 26%;
@@ -207,8 +248,8 @@ img {
 }
 
 .svg-g {
-    width: 14%;
-    bottom: 8%;
+    width: 9%;
+    bottom: 2%;
     right: 5%;
 }
 
@@ -221,9 +262,9 @@ img {
 
 /* event */
 .svg-q {
-    width: 40%;
+    width: 46%;
     top: -9%;
-    left: 28%;
+    left: 26%;
 }
 
 .svg-m {
@@ -232,11 +273,18 @@ img {
     right: 23%;
 }
 
+.svg-m2 {
+    width: 52%;
+    bottom: -6%;
+    left: 3%;
+}
+
 .main-top {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    padding-top: 52px;
 }
 
 .main-top>div {
