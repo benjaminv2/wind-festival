@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');
 
-
 html,
 body {
     font-family: "Chiron GoRound TC", sans-serif;
@@ -140,14 +139,14 @@ img {
 
 .svg-d {
     width: 15%;
-    top: 18%;
+    top: 16%;
     left: 34%;
 }
 
 .svg-f {
     width: 9%;
     top: 51%;
-    left: 37%;
+    left: 39%;
     /* display: none; */
 }
 
@@ -157,7 +156,6 @@ img {
     left: 23%;
     /* display: none; */
 }
-
 .svg-j {
     width: 35%;
     bottom: -6%;
@@ -165,8 +163,8 @@ img {
 }
 
 .svg-k {
-    width: 9%;
-    top: 44%;
+    width: 7%;
+    top: 42%;
     left: 46%;
 }
 
@@ -174,7 +172,7 @@ img {
     width: 12%;
     bottom: -2%;
     right: 22%;
-}
+} 
 
 .svg-l {
     width: 16%;
@@ -279,9 +277,9 @@ img {
 }
 
 .svg-m2 {
-    width: 52%;
-    bottom: -6%;
-    left: 3%;
+    width: 61%;
+    bottom: -2%;
+    left: 13%;
 }
 
 .main-top {
@@ -451,7 +449,8 @@ p {
 }
 
 #lab .date2 {
-    color: #000
+    color: #000;
+    font-weight: 500;
 }
 
 #market {
