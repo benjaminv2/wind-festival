@@ -1,6 +1,6 @@
-[data-event-carousel] {
+.white-sec[data-event-carousel] {
     display: block;
-    --carousel-gap: 20px;
+    --carousel-gap: 15px;
 }
 .event-carousel-viewport {
     overflow: hidden;
@@ -20,7 +20,7 @@
     flex: 0 0 var(--card-width);
     width: var(--card-width);
     min-width: 0;
-    padding: 100px clamp(16px, 4vw, 70px) 110px;
+    padding: 100px clamp(16px, 4vw, 60px) 110px;
 }
 .event-carousel-controls {
     display: flex;
@@ -98,3 +98,5 @@
     pointer-events: none;
 }
 [data-event-carousel] .event-box .abs-btn > .btn { pointer-events: auto; }
+
+[data-event-carousel] .abs-btn > a.btn { text-decoration: none; }

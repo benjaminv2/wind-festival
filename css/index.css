@@ -29,6 +29,11 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -106,13 +111,13 @@ img {
 
 
 .map {
-    background-image: url(../img/map.svg);
+    /* background-image: url(../img/kv_island.png); */
     background-size: 100%;
     background-position: top center;
     background-repeat: no-repeat;
     max-height: 776px;
     width: 100%;
-    margin-top: -25px;
+    margin-top: -31px;
 }
 
 .map .abs img {
@@ -126,8 +131,8 @@ img {
 }
 
 .svg-a2 {
-    width: 24%;
-    bottom: -2%;
+    width: 26%;
+    bottom: 9%;
     right: -5%;
 }
 
@@ -156,6 +161,7 @@ img {
     left: 23%;
     /* display: none; */
 }
+
 .svg-j {
     width: 35%;
     bottom: -6%;
@@ -170,9 +176,9 @@ img {
 
 .svg-k2 {
     width: 12%;
-    bottom: -2%;
+    bottom: 7%;
     right: 22%;
-} 
+}
 
 .svg-l {
     width: 16%;
@@ -207,8 +213,8 @@ img {
 
 .svg-p {
     width: 31%;
-    top: -6%;
-    right: 5%;
+    top: -5%;
+    right: -6%;
 }
 
 .svg-p2 {
@@ -258,7 +264,7 @@ img {
 
 .svg-i {
     width: 26%;
-    top: -7%;
+    top: -13%;
     right: 4%;
     z-index: 9999;
 }
@@ -266,8 +272,9 @@ img {
 /* event */
 .svg-q {
     width: 46%;
-    top: -9%;
+    top: -6%;
     left: 26%;
+
 }
 
 .svg-m {
@@ -314,10 +321,11 @@ img {
     /* 如果螢幕寬度不夠，允許自動換行（手機板必備） */
     list-style: none;
     /* 移除清單預設的圓點 */
-    padding: 0 35px;
+    padding: 0 29px;
     /* 移除預設的內縮邊距 */
     /* gap: 35px; */
     /* 設定項目之間的間距（可依需求調整） */
+    font-size: 18px;
 }
 
 .navbar li {
@@ -335,15 +343,16 @@ img {
 
 .afterbus {
     background-image: url('../img/nav_bar.svg');
-    background-size: contain;
+    background-size: 98% 83%;
     background-repeat: no-repeat;
     background-position: center;
     margin-left: -8px;
     margin-top: -20px;
+    /* height: 79px; */
 }
 
 #concert {
-    background-image: url('../img/bg.png');
+    background-image: url('../img/bg_music02.png');
     background-size: 103%;
     background-position: top;
     background-repeat: no-repeat;
@@ -404,8 +413,8 @@ p {
 .artist[data-component="marquee"] {
     width: 100%;
     height: clamp(300px, 38vw, 510px);
-    -webkit-mask-image: url("../img/c-mask.svg");
-    mask-image: url("../img/c-mask.svg");
+    -webkit-mask-image: url("../img/music_curve.svg");
+    mask-image: url("../img/music_curve.svg");
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
@@ -416,7 +425,7 @@ p {
 
 .artist[data-component="marquee"] img {
     display: block;
-    width: clamp(220px, 25vw, 342px);
+    width: clamp(220px, 25vw, 642px);
     max-width: none;
     height: 100%;
     object-fit: cover;
@@ -426,7 +435,6 @@ p {
 .p-fix {
     padding: 10px 60px;
 }
-
 
 .svg-title {
     height: 70px;
@@ -439,6 +447,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    font-size: 20px;
 }
 
 .date2 {
@@ -449,7 +458,7 @@ p {
 }
 
 #lab .date2 {
-    color: #000;
+    color: #fff;
     font-weight: 500;
 }
 
@@ -545,7 +554,7 @@ figure {
     flex-direction: row;
     gap: 20px;
     width: 100%;
-    padding-bottom: 305px;
+    padding-bottom: 209px;
 }
 
 .event-box {
@@ -597,7 +606,7 @@ figure {
     width: 62%;
     margin: 0 auto;
     background-image: url('../img/tour-bg.svg');
-    background-size: 100%;
+    background-size: 100% 96%;
     background-position: top center;
     background-repeat: no-repeat;
     display: flex;
@@ -605,7 +614,7 @@ figure {
     padding: 80px 120px;
     color: #000;
     font-size: 20px;
-    aspect-ratio: 1/1.5;
+    aspect-ratio: 1/1.2;
     z-index: 2;
     position: relative;
 }
@@ -630,15 +639,25 @@ figure {
     gap: 15px;
 }
 
+.tour-box li {
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
 .tour-box li::before {
     content: "";
-    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: calc(.5lh - 5px);
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #00b0ec;
-    margin-right: 10px;
-    flex-shrink: 0;
+    background-color: #000000;
+}
+
+li {
+    list-style-position: outside;
 }
 
 .h-light,
@@ -649,8 +668,9 @@ figure {
     padding-bottom: 2px;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    margin-bottom: 1rem;
+    margin-bottom: 5px;
     background-image: linear-gradient(to top, #FFF568 55%, transparent 40%);
+    width: fit-content;
 }
 
 .h-light2 {
@@ -662,7 +682,7 @@ figure {
 }
 
 footer {
-    margin-top: -500px;
+    margin-top: -384px;
     z-index: 0;
     position: relative;
 }
@@ -677,3 +697,16 @@ footer {
 .diary .date-box {
     margin: unset
 }
+
+.aa {
+    font-size: 36px;
+    margin-right: 10px;
+    font-weight: 500;
+    color: #00B0EC
+}
+
+.t-fix {
+    background-size: 100% 89%;
+}
+
+/* 手機：每個欄位各占一整列 */

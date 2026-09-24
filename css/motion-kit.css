@@ -127,7 +127,7 @@
 
 /* Staged button animation; appearance stays in index.css. */
 
-[data-component="sparkle-reveal"].btn{position:relative;display:inline-flex;align-items:center;gap:12px;border:0;font-family:inherit;line-height:inherit;cursor:pointer;overflow:visible;text-align:inherit}
+[data-component="sparkle-reveal"].btn{position:relative;display:inline-flex;align-items:center;gap:12px;border:0;font-family:inherit;line-height:inherit;cursor:pointer;overflow:visible;text-align:inherit;}
 
 
 

@@ -18,7 +18,12 @@
         function copy(card) {
             const clone = card.cloneNode(true);
             clone.setAttribute('aria-hidden', 'true');
-            clone.setAttribute('inert', '');
+            // Visible loop copies stay clickable without duplicate tab stops.
+            clone.querySelectorAll('a, button, [tabindex]').forEach(el => el.tabIndex = -1);
+            clone.querySelectorAll('.sr-confetti').forEach(el => el.remove());
+            clone.querySelectorAll('[data-component="sparkle-reveal"]').forEach(el => {
+                el.classList.remove('sr-ready', 'sr-visible', 'sr-entered');
+            });
             clone.removeAttribute('id');
             clone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
             return clone;
@@ -44,6 +49,7 @@
         }
         controls.append(arrow('prev', '上一張活動'), dots, arrow('next', '下一張活動'));
         root.replaceChildren(viewport, controls);
+        window.MotionKit?.init(root);
         let index = Math.min(1, count - 1), physical = count + index;
         let busy = false, timer, finishTimer, visible = true, paused = false;
         const pauseButton = document.createElement('button');
@@ -111,8 +117,9 @@
             busy = false;
             physical = count + index;
             const gap = parseFloat(getComputedStyle(track).gap) || 0;
-            // Viewport = 60% neighbour + gap + full card + gap + 60% neighbour.
-            root.style.setProperty('--card-width', `${Math.max(1, (viewport.clientWidth - 2 * gap) / 2.2)}px`);
+            // Mobile: 20% neighbour + full card + 20% neighbour, plus two gaps.
+            const visibleCards = parseFloat(getComputedStyle(root).getPropertyValue('--carousel-visible-cards')) || 3.05;
+            root.style.setProperty('--card-width', `${Math.max(1, (viewport.clientWidth - 2 * gap) / visibleCards)}px`);
             paint(false);
             schedule();
         }

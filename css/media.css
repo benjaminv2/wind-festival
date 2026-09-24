@@ -1,0 +1,152 @@
+@media (max-width: 767px) {
+    .container {}
+
+    .grid-container {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    /* 一般區塊：手機占滿整列 */
+    .grid-container>[class*="col-"] {
+        grid-column: span 12;
+        min-width: 0;
+    }
+
+    /* 圖片區塊：維持和電腦相同的欄數 */
+    .grid-container>.col-4.pixbox {
+        grid-column: span 4;
+        /* 每列 3 張 */
+    }
+
+    .grid-container>.col-3.pixbox {
+        grid-column: span 3;
+        /* 每列 4 張 */
+    }
+
+
+
+    .navbar {
+        position: relative !important;
+        display: none;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header>.grid-container>.col-7 {
+        order: -1;
+    }
+
+    header>.grid-container>.col-5 {
+        order: 0;
+    }
+
+    .main-top {
+        padding-top: 0;
+        margin-top: -100px;
+    }
+
+    .p-fix {
+        padding: 0px;
+    }
+
+    #concert {
+        padding-top: 15px;
+    }
+
+    #concert .col-4 {
+        order: -1;
+    }
+
+    #concert .col-8 {
+        order: 0;
+    }
+
+
+    .artist[data-component="marquee"] {
+
+        -webkit-mask-size: 100% 100%;
+        mask-size: 207% 102%;
+    }
+
+    #concert ul,
+    #lab ul {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .date2 {
+        display: block;
+        width: fit-content;
+        margin-bottom: 5px
+    }
+
+    .pixbox img {
+        border-radius: 20px;
+    }
+
+
+    .event-box {
+        border-radius: 100px
+    }
+
+
+    footer {
+        margin-top: 0
+    }
+.event-box{
+    gap:10px
+}
+    .event-carousel-viewport {
+    overflow: hidden;
+    padding-block: 58px 90px;
+    padding-bottom: 36px;
+}
+    /* 
+    #diary {
+        display: none;
+    } */
+
+    /* #tour {
+        display: none;
+    } */
+    .diary-left {
+   
+    padding: 20px 50px;
+}
+.white-sec{padding-bottom:35px}
+    #tour{width:100%}
+.tour-box {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('../img/tour-bg.svg');
+    background-size: 99% 96%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 21px;
+    color: #000;
+    font-size: 20px;
+    aspect-ratio: unset;
+    z-index: 2;
+    position: relative;
+    background: #fff;
+    box-sizing: border-box;
+}
+    .tour-title{width: 95%;margin:0 auto;}
+    .h-light{display:block;}
+.svg-a2{display:none;}
+
+
+
+
+    
+ [data-event-carousel] {
+        --carousel-visible-cards: 1.1;
+    }
+}
+    
+
+
+   
