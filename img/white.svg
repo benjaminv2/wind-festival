@@ -1,3 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1361.778" height="875.594" viewBox="0 0 1361.778 875.594">
-  <path id="white" d="M830.92,0,399.268,22.78,206.324,35.436,0,62.129V851.023L317.723,862l568-15,476.055,28.595V46.812L1109.2,19.405Z" transform="translate(0 0)" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg"    preserveAspectRatio="none" width="1361.778" height="875.594" viewBox="0 0 1361.778 875.594">
+  <path
+    id="white"
+ 
+    d="M830.92,0,399.268,22.78,206.324,35.436,0,62.129V851.023L317.723,862l568-15,476.055,28.595V46.812L1109.2,19.405Z"
+    transform="translate(0 0)"
+    fill="#fff" />
 </svg>

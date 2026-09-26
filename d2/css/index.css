@@ -25,9 +25,8 @@ body {
     max-width: 1366px;
     margin: 0 auto;
     padding: 0;
-    padding: 0 30px;
-    /* background: #00B0EC; */
-    box-sizing: border-box;
+    background: #00B0EC;
+
 }
 
 a {
@@ -49,19 +48,19 @@ img {
     position: absolute;
 }
 
-/* 12 ç­‰åˆ† Grid å®¹å™¨ */
+/* 12 等分 Grid 容器 */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    /* è‡ªå‹•å°‡æ¬„ä½åˆ‡æˆç›¸ç­‰çš„ 12 ä»½ */
+    /* 自動將欄位切成相等的 12 份 */
     gap: 16px;
-    /* æ¬„ä½ä¹‹é–“çš„é–“è·ï¼Œå¯ä¾éœ€æ±‚èª¿æ•´ */
+    /* 欄位之間的間距，可依需求調整 */
 }
 
-/* åŸºæœ¬æ¨£å¼ (åƒ…ç”¨æ–¼è¦–è¦ºå‘ˆç¾) */
+/* 基本樣式 (僅用於視覺呈現) */
 .grid-container>div {}
 
-/* å„è·¨æ¬„æ•¸é¡žåˆ¥ (Column Span) */
+/* 各跨欄數類別 (Column Span) */
 .col-1 {
     grid-column: span 1;
 }
@@ -322,15 +321,15 @@ img {
 .navbar ul {
     display: flex;
 
-    /* å•Ÿç”¨ Flexbox ä½ˆå±€ï¼Œè®“å­é …ç›®è‡ªå‹•æ©«å‘æŽ’åˆ— */
+    /* 啟用 Flexbox 佈局，讓子項目自動橫向排列 */
     flex-wrap: nowrap;
-    /* å¦‚æžœèž¢å¹•å¯¬åº¦ä¸å¤ ï¼Œå…è¨±è‡ªå‹•æ›è¡Œï¼ˆæ‰‹æ©Ÿæ¿å¿…å‚™ï¼‰ */
+    /* 如果螢幕寬度不夠，允許自動換行（手機板必備） */
     list-style: none;
-    /* ç§»é™¤æ¸…å–®é è¨­çš„åœ“é»ž */
+    /* 移除清單預設的圓點 */
     padding: 0 29px;
-    /* ç§»é™¤é è¨­çš„å…§ç¸®é‚Šè· */
+    /* 移除預設的內縮邊距 */
     /* gap: 35px; */
-    /* è¨­å®šé …ç›®ä¹‹é–“çš„é–“è·ï¼ˆå¯ä¾éœ€æ±‚èª¿æ•´ï¼‰ */
+    /* 設定項目之間的間距（可依需求調整） */
     font-size: 18px;
 }
 
@@ -343,7 +342,7 @@ img {
 
 .navbar .bus {
     flex: 0 0 200px;
-    /* å›ºå®šå ç”¨ 200pxï¼Œä¸æ”¾å¤§ä¹Ÿä¸ç¸®å° */
+    /* 固定占用 200px，不放大也不縮小 */
     z-index: 12;
     margin-left: 25px;
 }
@@ -360,7 +359,7 @@ img {
 
 #concert {
     background-image: url('../img/bg_music02.png');
-    background-size: 101% 99%;
+    background-size: 103%;
     background-position: top;
     background-repeat: no-repeat;
     padding-top: 70px;
@@ -422,8 +421,7 @@ p {
 
 .artist[data-component="marquee"] {
     width: 100%;
-    height: auto;
-    /* height: clamp(300px, 38vw, 510px); */
+    height: clamp(300px, 38vw, 510px);
     -webkit-mask-image: url("../img/music_curve.svg");
     mask-image: url("../img/music_curve.svg");
     -webkit-mask-size: 100% 100%;
@@ -558,7 +556,7 @@ figure {
     background-image: url('../img/white.svg');
     background-position: center top 149px;
     background-repeat: no-repeat;
-    background-size: 100% 75%;
+    background-size: 75% auto;
     padding-top: 30px;
     overflow: hidden;
     display: flex;
@@ -696,13 +694,6 @@ footer {
     margin-top: -370px;
     z-index: 0;
     position: relative;
-    margin: -370px auto 0;
-    width: 100%;
-    text-align: center;
-}
-footer img {
-    display: block;
-    margin: 0 auto;
 }
 
 /*  */
@@ -727,4 +718,4 @@ footer img {
     background-size: 100% 89%;
 }
 
-/* æ‰‹æ©Ÿï¼šæ¯å€‹æ¬„ä½å„å ä¸€æ•´åˆ— */
+/* 手機：每個欄位各占一整列 */

@@ -1,60 +1,46 @@
 <!doctype html>
 <html lang="zh-Hant">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>風域季</title>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/motion-kit.css" />
-        <link rel="stylesheet" href="css/event-carousel.css" />
-        <link rel="stylesheet" href="css/media.css" />
+    <title>風域季</title>
 
-        <script src="js/motion-kit.js" defer></script>
-        <script src="js/event-carousel.js" defer></script>
-    </head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/motion-kit.css" />
+    <link rel="stylesheet" href="css/event-carousel.css" />
+    <link rel="stylesheet" href="css/media.css" />
 
-    <body>
+    <script src="js/motion-kit.js" defer></script>
+    <script src="js/event-carousel.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
         <header>
-            <div class="grid-container container">
+            <div class="grid-container">
                 <div class="col-5 relative main-top">
-                    <div
-                        data-enter="pop"
-                        data-trigger="load"
+                    <div data-enter="pop" data-trigger="load"
                         style="--enter-delay: 0s; transform-origin: bottom center">
-                        <img
-                            src="img/logo.svg"
-                            alt=""
-                            data-motion="float-soft"
-                            data-rhythm="smooth"
+                        <img src="img/logo.svg" alt="" data-motion="float-soft" data-rhythm="smooth"
                             style="--motion-delay: 0.9s; --motion-origin: bottom center" />
                     </div>
                     <div data-enter="pop" data-trigger="load" style="--enter-delay: 1s">
-                        <img
-                            src="img/sub.svg"
-                            alt=""
-                            data-motion="float-soft"
-                            data-rhythm="smooth"
-                            style="
-                                --motion-delay: 1.9s;
-                                --motion-y: -7px;
-                                --motion-rotate: 1deg;
-                                --motion-duration: 6s;
-                            " />
+                        <img src="img/sub.svg" alt="" data-motion="float-soft" data-rhythm="smooth" style="
+                                    --motion-delay: 1.9s;
+                                    --motion-y: -7px;
+                                    --motion-rotate: 1deg;
+                                    --motion-duration: 6s;
+                                " />
                     </div>
                     <div data-enter="pop" data-trigger="load" style="--enter-delay: 2s">
-                        <img
-                            src="img/tx.png"
-                            alt=""
-                            data-motion="float-soft"
-                            data-rhythm="smooth"
-                            style="
-                                --motion-delay: 2.9s;
-                                --motion-y: -3px;
-                                --motion-rotate: 0.4deg;
-                                --motion-duration: 8s;
-                            " />
+                        <img src="img/tx.png" alt="" data-motion="float-soft" data-rhythm="smooth" style="
+                                    --motion-delay: 2.9s;
+                                    --motion-y: -3px;
+                                    --motion-rotate: 0.4deg;
+                                    --motion-duration: 8s;
+                                " />
                     </div>
                     <div>
                         <p class="tx22 w400">
@@ -79,11 +65,7 @@
                         <img src="img/map@2x.png" alt="" />
                         <!-- a -->
                         <div class="abs svg-a">
-                            <img
-                                src="img/a.svg"
-                                alt=""
-                                data-motion="sign"
-                                data-rhythm="smooth"
+                            <img src="img/a.svg" alt="" data-motion="sign" data-rhythm="smooth"
                                 style="--motion-origin: bottom center" />
                         </div>
                         <!-- d -->
@@ -125,12 +107,13 @@
 
         <main>
             <section id="concert" class="relative">
-                <div class="grid-container container p-fix">
+                <div class="grid-container p-fix">
                     <div class="col-8">
                         <figure>
                             <img src="img/Title01.svg" class="svg-title" alt="" />
                             <p class="tx26">
-                                三天音樂演出，從部落古謠、地方創作、獨立音樂、流行音樂到 DJ，讓不同聲音在風域半島相遇。
+                                三天音樂演出，從部落古謠、地方創作、獨立音樂、流行音樂到
+                                DJ，讓不同聲音在風域半島相遇。
                             </p>
                         </figure>
                     </div>
@@ -146,13 +129,9 @@
                     </div>
                 </div>
                 <div class="abs svg-e"><img src="img/e.svg" alt="" /></div>
-                <div class="grid-container container_fluid">
+                <div class="grid-container">
                     <div class="col-12 artist-window">
-                        <div
-                            class="artist"
-                            data-component="marquee"
-                            role="region"
-                            aria-label="歌手照片"
+                        <div class="artist" data-component="marquee" role="region" aria-label="歌手照片"
                             style="--track-duration: 60s; --track-gap: 0px">
                             <img src="img/lineup/010.jpg" alt="歌手照片 1" />
                             <img src="img/lineup/011.jpg" alt="歌手照片 2" />
@@ -167,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-container container p-fix">
+                <div class="grid-container p-fix">
                     <div class="col-12">
                         <ul>
                             <li>
@@ -186,7 +165,7 @@
                 </div>
             </section>
             <section id="market">
-                <div class="grid-container container p-fix relative">
+                <div class="grid-container p-fix relative">
                     <div class="col-5">
                         <figure>
                             <img src="img/Title02.svg" class="svg-title" alt="" />
@@ -226,19 +205,17 @@
                     </div>
 
                     <div class="col-12">
-                        <a
-                            href="https://www.surveycake.com/s/adVQK?fbclid=IwcGRvZgVleHRuA2FlbQIxMABicmlkETFxTVQ1ZndmYm1lWTRvSHZFc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHm7oaAl9AqoGYjyv5MYSb5cB-sLUlXewP3rEb-VpM6Uw4qY0ZYlm4FVgQzFA_aem_2n0zdVNj61ltaai0tvhVfg"
+                        <a href="https://www.surveycake.com/s/adVQK?fbclid=IwcGRvZgVleHRuA2FlbQIxMABicmlkETFxTVQ1ZndmYm1lWTRvSHZFc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHm7oaAl9AqoGYjyv5MYSb5cB-sLUlXewP3rEb-VpM6Uw4qY0ZYlm4FVgQzFA_aem_2n0zdVNj61ltaai0tvhVfg"
                             target="_blank">
                             <button type="button" class="btn yellow" data-component="sparkle-reveal">
-                                <span class="sr-label">活動詳情與報名</span
-                                ><span class="sr-arrow" aria-hidden="true">→</span>
+                                <span class="sr-label">活動詳情與報名</span><span class="sr-arrow" aria-hidden="true">→</span>
                             </button>
                         </a>
                     </div>
                 </div>
             </section>
             <section id="lab" class="yellow">
-                <div class="grid-container p-fix container">
+                <div class="grid-container p-fix">
                     <div class="col-8">
                         <figure>
                             <img src="img/Title03.svg" class="svg-title" alt="" />
@@ -285,12 +262,10 @@
                     </div>
 
                     <div class="col-12">
-                        <a
-                            href="https://docs.google.com/forms/d/1kabkbB8ehDvnWDqR-TX9Q0NzPDnKptrKBIY2UM63-28/edit"
+                        <a href="https://docs.google.com/forms/d/1kabkbB8ehDvnWDqR-TX9Q0NzPDnKptrKBIY2UM63-28/edit"
                             target="_blank">
                             <button type="button" class="btn green" data-component="sparkle-reveal">
-                                <span class="sr-label">活動詳情與報名</span
-                                ><span class="sr-arrow" aria-hidden="true">→</span>
+                                <span class="sr-label">活動詳情與報名</span><span class="sr-arrow" aria-hidden="true">→</span>
                             </button>
                         </a>
                     </div>
@@ -298,7 +273,7 @@
             </section>
             <section class="diary" id="diary">
                 <div class="relative"><img src="img/sep.svg" /></div>
-                <div class="grid-container container relative">
+                <div class="grid-container relative">
                     <div class="col-6 diary-left">
                         <figure>
                             <img src="img/Title04.svg" class="svg-title" alt="" />
@@ -326,7 +301,7 @@
                     </div>
                     <div class="abs svg-g"><img src="img/g.svg" alt="" /></div>
                 </div>
-                <div class="container_fluid white-sec" data-event-carousel id="tcard">
+                <div class="container white-sec" data-event-carousel id="tcard">
                     <!-- Box -->
                     <div class="event-box relative">
                         <div class="tag abs">特色遊程</div>
@@ -342,11 +317,8 @@
                             從車城、牡丹到滿州，規劃五條風域特色遊程，走進高士、四林、九棚、里德與四重溪。沿著山林步道、部落與聚落慢慢旅行，吃地方風味、聽文化故事，也親手參與農事與文化體驗，用一天的時間，認識風域半島不同的生活風景。
                         </div>
                         <div class="abs abs-btn">
-                            <a
-                                href="https://www.windpeninsula.tw/Tour"
-                                target="_blank"
-                                class="btn blue"
-                                data-component="sparkle-reveal">
+                            <a href="https://www.windpeninsula.tw/Tour" target="_blank"
+                                class="btn blue" data-component="sparkle-reveal">
                                 <span class="sr-label">活動詳情</span><span class="sr-arrow" aria-hidden="true">→</span>
                             </a>
                         </div>
@@ -362,18 +334,14 @@
                         <div class="e-title"><img src="img/Title06.svg" alt="" /></div>
                         <div class="tx22 w500">把半島的味道，帶到一張餐桌上</div>
                         <div class="tx20 w400">
-                            主場活動結束後，風域祭繼續往半島裡走。我們走進旭海、九棚與高士，把海岸、聚落、山林與地方生活搬上餐桌。三場不同的「打包」，邀請你坐下來，用一頓飯的時間，慢慢認識這片土地。<br />
-                            <span class="bold h-light2">暗夜打包｜牡丹鄉旭海社區</span><br />
-                            <span class="bold h-light2">記憶打包｜滿州鄉九棚社區</span><br />
+                            主場活動結束後，風域祭繼續往半島裡走。我們走進旭海、九棚與高士，把海岸、聚落、山林與地方生活搬上餐桌。三場不同的「打包」，邀請你坐下來，用一頓飯的時間，慢慢認識這片土地。<br>
+                            <span class="bold h-light2">暗夜打包｜牡丹鄉旭海社區</span><br>
+                            <span class="bold h-light2">記憶打包｜滿州鄉九棚社區</span><br>
                             <span class="bold h-light2">文化打包｜牡丹鄉高士社區</span>
                         </div>
                         <div class="abs abs-btn">
-                            <a
-                                href="https://www.windpeninsula.tw/News/NewsDetail/1055"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn blue"
-                                data-component="sparkle-reveal">
+                            <a href="https://www.windpeninsula.tw/News/NewsDetail/1055" target="_blank"
+                                rel="noopener noreferrer" class="btn blue" data-component="sparkle-reveal">
                                 <span class="sr-label">活動詳情</span><span class="sr-arrow" aria-hidden="true">→</span>
                             </a>
                         </div>
@@ -387,25 +355,23 @@
                             <img src="img/s.svg" alt="" data-motion="float-soft" data-rhythm="smooth" />
                         </div>
                         <div class="e-title"><img src="img/Title07.svg" alt="" /></div>
-                        <div class="tx22 w500">風這麼大，不追一下說不過去吧！</div>
+                        <div class="tx22  w500">風這麼大，不追一下說不過去吧！</div>
                         <div class="tx20 w400">
-                            OCT/24｜13:00-17:30<br />
-                            活動時間｜𝟮𝟬𝟮𝟲/𝟭𝟬/𝟮𝟰 𝟭𝟰:𝟬𝟬 - 𝟭𝟳:𝟬𝟬<br />
-                            活動地點｜屏東牡丹遊客中心<br />
-                            聽說有人要在牡丹追風？ 還要帶著地圖，翻山越嶺找方向？ 這堂風域學校的戶外課，
-                            我們決定把整座半島變成遊樂場！ ∿∿ 一個人來，挑戰你的方向感。∿∿
-                            兩個人來，看看誰才是人體導航。 ∿∿ 限時120分鐘，地圖拿好，準備出發！
+                            OCT/24｜13:00-17:30<br>
+                            活動時間｜𝟮𝟬𝟮𝟲/𝟭𝟬/𝟮𝟰 𝟭𝟰:𝟬𝟬 - 𝟭𝟳:𝟬𝟬<br>
+                            活動地點｜屏東牡丹遊客中心<br>
+                            聽說有人要在牡丹追風？
+                            還要帶著地圖，翻山越嶺找方向？
+
+                            這堂風域學校的戶外課， 我們決定把整座半島變成遊樂場！
+
+                            ∿∿ 一個人來，挑戰你的方向感。∿∿ 兩個人來，看看誰才是人體導航。
+                            ∿∿ 限時120分鐘，地圖拿好，準備出發！
                         </div>
-                        <div class="abs abs-btn">
-                            <a
-                                href="https://bao-ming.com/eb/content/7217#34072"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn blue"
-                                data-component="sparkle-reveal">
+                        <div class="abs abs-btn"><a href="https://bao-ming.com/eb/content/7217#34072" target="_blank"
+                                rel="noopener noreferrer" class="btn blue" data-component="sparkle-reveal">
                                 <span class="sr-label">活動詳情</span><span class="sr-arrow" aria-hidden="true">→</span>
-                            </a>
-                        </div>
+                            </a></div>
                     </div>
                     <!-- box end -->
                     <!-- Box -->
@@ -418,19 +384,13 @@
                         <div class="e-title"><img src="img/Title08.svg" alt="" /></div>
                         <div class="tx22 w500">大風吹去哪裡了？</div>
                         <div class="tx20 w400">
-                            <span class="bold">打卡任務｜跟著大風校長去放風</span
-                            ><br />前往風域半島五大站點，找到「大風校長」主題裝置，拍照完成指定任務，就能收集你的放風學分！<br />
-                            <span class="bold">兌換禮｜放風也要有學分</span><br />完成任一站打卡任務，即可獲得 1
-                            點放風學分＋活動紀念小禮；集滿 5
+                            <span class="bold">打卡任務｜跟著大風校長去放風</span><br>前往風域半島五大站點，找到「大風校長」主題裝置，拍照完成指定任務，就能收集你的放風學分！<br>
+                            <span class="bold">兌換禮｜放風也要有學分</span><br>完成任一站打卡任務，即可獲得 1 點放風學分＋活動紀念小禮；集滿 5
                             點放風學分，還能拍攝專屬「放風畢業照」，取得抽獎資格，有機會成為「放風優等生」，把風域學校限定好禮帶回家！
                         </div>
                         <div class="abs abs-btn">
-                            <a
-                                href="https://www.windpeninsula.tw/News/NewsDetail/1057"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn blue"
-                                data-component="sparkle-reveal">
+                            <a href="https://www.windpeninsula.tw/News/NewsDetail/1057" target="_blank"
+                                rel="noopener noreferrer" class="btn blue" data-component="sparkle-reveal">
                                 <span class="sr-label">活動詳情</span><span class="sr-arrow" aria-hidden="true">→</span>
                             </a>
                         </div>
@@ -450,25 +410,23 @@
                         <div class="tx20 w400">
                             來風域半島放風，把限定回憶一起帶回家！
                             《是大風吹歪的》貼紙組、《不可能是冰箱裡的食物吧！》冰箱貼、《矮唷！獵到手囉！》手機吊飾、《袋風走？》環保編織袋等趣味周邊陸續登場。
+
                         </div>
-                        <div class="abs abs-btn">
-                            <a
-                                href="https://www.windpeninsula.tw/News/NewsDetail/1056"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn blue"
+                        <div class="abs abs-btn"><a href="https://www.windpeninsula.tw/News/NewsDetail/1056"
+                                target="_blank" rel="noopener noreferrer" class="btn blue"
                                 data-component="sparkle-reveal">
                                 <span class="sr-label">活動詳情</span><span class="sr-arrow" aria-hidden="true">→</span>
-                            </a>
-                        </div>
+                            </a></div>
                     </div>
                     <!-- box end -->
                 </div>
             </section>
             <section id="tour" class="blue">
-                <div class="tour-title container"><img src="img/tour-title.png" alt="特色遊程" /></div>
-                <div class="tour-box container relative">
-                    <p><span class="h-light">活動接駁服務</span>為便利民眾往返各活動據點，本案規劃兩條免費接駁路線。</p>
+                <div class="tour-title"><img src="img/tour-title.png" alt="特色遊程" /></div>
+                <div class="tour-box relative">
+                    <p>
+                        <span class="h-light">活動接駁服務</span>為便利民眾往返各活動據點，本案規劃兩條免費接駁路線。
+                    </p>
                     <p><span class="aa">A路線</span> <span class="tx26 w500">停車場接駁 / 小巴或九人座</span></p>
                     <ul>
                         <li>14:00-16:30｜每 30 分鐘發車，每時段配置 1 班接駁車</li>
@@ -486,7 +444,7 @@
                     </ul>
                     <img src="img/b-tx.svg" />
                 </div>
-                <div class="tour-box container relative t-fix">
+                <div class="tour-box relative  t-fix">
                     <p><span class="h-light">自行開車</span></p>
                     <ul>
                         <li>
@@ -528,5 +486,7 @@
             </section>
         </main>
         <footer><img src="img/bg_footer.png" /></footer>
-    </body>
+    </div>
+</body>
+
 </html>

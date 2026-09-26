@@ -3,12 +3,12 @@
 <file name="a-line.png" server="ftp.lab-d2.com//windfestival_2026/" local="134344902693340830" remote="134346225600000000" Dst="0" />
 <file name="a.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911490000000" remote="134346225600000000" Dst="0" />
 <file name="a-tx.png" server="ftp.lab-d2.com//windfestival_2026/" local="134344904408215952" remote="134346225600000000" Dst="0" />
-<file name="a-tx.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134345324817837153" remote="134346226200000000" Dst="0" />
+<file name="a-tx.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134349206217067915" remote="134349173400000000" Dst="0" />
 <file name="Asset 1.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343937550000000" remote="134346226200000000" Dst="0" />
 <file name="arr.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134345317866367396" remote="134346226200000000" Dst="0" />
 <file name="b-line.png" server="ftp.lab-d2.com//windfestival_2026/" local="134344903460794730" remote="134346226200000000" Dst="0" />
 <file name="b-tx.png" server="ftp.lab-d2.com//windfestival_2026/" local="134344904699270293" remote="134346226200000000" Dst="0" />
-<file name="b-tx.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134345324817147025" remote="134346226200000000" Dst="0" />
+<file name="b-tx.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134349206215450516" remote="134349173400000000" Dst="0" />
 <file name="b.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911490000000" remote="134346226200000000" Dst="0" />
 <file name="bg.png" server="ftp.lab-d2.com//windfestival_2026/" local="134344115695213842" remote="134346226200000000" Dst="0" />
 <file name="bg_footer.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343919340000000" remote="134346226200000000" Dst="0" />
@@ -40,7 +40,7 @@
 <file name="n.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911490000000" remote="134346226200000000" Dst="0" />
 <file name="map.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343981403840633" remote="134346226200000000" Dst="0" />
 <file name="nav_bar.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134346580904334478" remote="134346666600000000" Dst="0" />
-<file name="map@2x.png" server="ftp.lab-d2.com//windfestival_2026/" local="134346447295142547" remote="134346666600000000" Dst="0" />
+<file name="map@2x.png" server="ftp.lab-d2.com//windfestival_2026/" local="134349163986585906" remote="134347071000000000" Dst="0" />
 <file name="o.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911490000000" remote="134346226200000000" Dst="0" />
 <file name="p.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911490000000" remote="134346226200000000" Dst="0" />
 <file name="q.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911490000000" remote="134346226200000000" Dst="0" />
@@ -50,7 +50,7 @@
 <file name="sub.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134344041853423663" remote="134346226200000000" Dst="0" />
 <file name="sep.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134344944607083123" remote="134346226200000000" Dst="0" />
 <file name="tag-bg.png" server="ftp.lab-d2.com//windfestival_2026/" local="134344865271964072" remote="134346226200000000" Dst="0" />
-<file name="Title01.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134344440410332373" remote="134346226200000000" Dst="0" />
+<file name="Title01.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163932616731" remote="134347127400000000" Dst="0" />
 <file name="t.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343911500000000" remote="134346226200000000" Dst="0" />
 <file name="Title02.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134344575312127812" remote="134346226200000000" Dst="0" />
 <file name="Title03.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134343909050000000" remote="134346226200000000" Dst="0" />
@@ -69,9 +69,13 @@
 <file name="kv_island.png" server="ftp.lab-d2.com//windfestival_2026/" local="134346443812354622" remote="134346306600000000" Dst="0" />
 <file name="music_curve.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134346536160000000" remote="134346666600000000" Dst="0" />
 <file name="bg_music02.png" server="ftp.lab-d2.com//windfestival_2026/" local="134346519680000000" remote="134346666600000000" Dst="0" />
-<file name="lab00.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134346561650000000" remote="134346667200000000" Dst="0" />
-<file name="lab01.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134346561660000000" remote="134346667200000000" Dst="0" />
-<file name="lab02.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134346561660000000" remote="134346667200000000" Dst="0" />
-<file name="lab03.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134346561660000000" remote="134346667200000000" Dst="0" />
+<file name="lab00.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163937649515" remote="134346999000000000" Dst="0" />
+<file name="lab01.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163941258275" remote="134346999000000000" Dst="0" />
+<file name="lab02.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163946233749" remote="134346999000000000" Dst="0" />
+<file name="lab03.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163946366859" remote="134346999000000000" Dst="0" />
 <file name="bg_footer.png" server="ftp.lab-d2.com//windfestival_2026/" local="134346532800000000" remote="134346667200000000" Dst="0" />
+<file name="market01.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163991237574" remote="134347071000000000" Dst="0" />
+<file name="market02.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163993584302" remote="134347071000000000" Dst="0" />
+<file name="market03.jpg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163996358180" remote="134347071000000000" Dst="0" />
+<file name="slogan.svg" server="ftp.lab-d2.com//windfestival_2026/" local="134349163998130690" remote="134347071000000000" Dst="0" />
 </dwsync>
